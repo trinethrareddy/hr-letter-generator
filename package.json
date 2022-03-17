@@ -1,0 +1,46 @@
+{
+  "name": "hr-letter-generator-api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/bin/server",
+    "prestart": "babel ./src --out-dir build",
+    "startdev": "nodemon --exec babel-node ./src/bin/server",
+    "lint": "./node_modules/.bin/eslint ./src",
+    "pretty": "prettier --write '**/*.{js,json}' '!node_modules/**'",
+    "postpretty": "yarn lint --fix"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.4",
+    "nodejs-nodemailer-outlook": "^1.2.4",
+    "read-excel-file": "^5.2.28",
+    "xls-to-json": "^2.1.0",
+    "xlsx-to-json": "^0.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.0",
+    "@babel/runtime": "^7.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
